@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logiciel de gestion de parc matériel | Charlie Gestion</title>
+<meta name="description" content="Charlie Gestion centralise la localisation, le statut, l'historique et la conformité de votre parc matériel. Une plateforme web et mobile pour tout piloter. Demandez une démo.">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-bottom:56px}
+.feat:last-child{margin-bottom:0}
+.feat.rev .feat-visual{order:2}
+.feat-visual{border-radius:var(--rl);overflow:hidden;border:1px solid var(--g300);background:var(--g100)}
+.feat-visual svg{display:block;width:100%}
+.feat-tag{font-size:11px;font-weight:700;color:var(--or);text-transform:uppercase;letter-spacing:.7px;margin-bottom:10px}
+.feat h3{font-size:24px;font-weight:700;letter-spacing:-.3px;margin-bottom:8px;line-height:1.2}
+.feat .lead{font-size:15px;color:var(--g700);font-weight:600;margin-bottom:16px;line-height:1.5}
+.feat ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.feat li{font-size:14px;color:var(--g500);display:flex;gap:10px;line-height:1.5}
+.feat li svg{width:18px;height:18px;stroke:var(--or);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
+.split-head{text-align:center;margin-bottom:14px}
+.split-badge{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--grad);padding:6px 16px;border-radius:100px;margin-bottom:14px}
+.uc-tabs-wrap{max-width:560px;margin:0 auto 30px}
+.prod-tabs{display:flex;justify-content:center;gap:8px;margin-bottom:24px}
+.prod-tab{padding:9px 22px;border-radius:100px;border:1.5px solid var(--g300);background:#fff;font-size:14px;font-weight:600;color:var(--g500);cursor:pointer;font-family:inherit}
+.prod-tab.active{border-color:var(--or);color:var(--or);background:var(--or-l)}
+.prod-panel{display:none}.prod-panel.active{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.uc{border:1px solid var(--g300);border-radius:var(--rl);overflow:hidden;display:flex;flex-direction:column;background:#fff}
+.uc-img{width:100%;height:110px;background:linear-gradient(135deg,#edebe4,#ddd9cf);display:flex;align-items:center;justify-content:center;color:#8a897f;font-size:10px;font-weight:600;text-align:center;padding:8px}
+.uc-body{padding:16px;display:flex;flex-direction:column;flex:1}
+.uc-usage{font-size:10px;font-weight:700;color:var(--or);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
+.uc-prod{font-size:15px;font-weight:700;margin-bottom:9px}
+.uc-specs{display:flex;flex-direction:column;gap:4px;margin-top:auto}
+.uc-spec{display:flex;justify-content:space-between;font-size:11px;padding:3px 0;border-bottom:1px solid var(--g100)}
+.uc-spec .k{color:var(--g500)}.uc-spec .v{font-weight:600}
+.stat-light{background:var(--g100)!important;border:none!important}
+.stat-light .num{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat-light .lbl{color:var(--g500)}
+.store-row{display:flex;gap:12px;margin-top:18px}
+.store-btn{background:var(--noir);color:#fff;border-radius:8px;padding:9px 16px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;text-decoration:none}
+.store-btn svg{width:18px;height:18px;fill:#fff}
+@media(max-width:900px){.feat{grid-template-columns:1fr;gap:20px}.feat.rev .feat-visual{order:0}.prod-panel.active{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-i">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Charlie Solutions</a>
+    <div class="nav-links"><a href="index.html">&larr; Vue d'ensemble</a><a href="#form" class="nav-cta">Demander une démo</a></div>
+  </div>
+</nav>
+
+<!-- HERO orienté PLATEFORME -->
+<section class="hero">
+  <div class="hero-video-bg"><div class="vid-ph">
+    <svg viewBox="0 0 1100 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="g2" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#fff" stroke-width="1"/></pattern></defs><rect width="1100" height="600" fill="url(#g2)"/></svg>
+  </div></div>
+  <span class="vid-tag"><span class="dot"></span>VIDÉO DE FOND — démo plateforme Charlie Gestion (MP4 à intégrer)</span>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow">Logiciel de gestion de parc matériel</div>
+        <h1>La maîtrise totale de vos équipements, <span class="hl">depuis un seul écran</span>.</h1>
+        <p class="hero-sub">Charlie Gestion centralise localisation, statut, historique et conformité de tout votre parc. Les données remontent automatiquement via vos capteurs, trackers et QR codes — plus de saisie manuelle, plus d'oublis, plus d'incertitude.</p>
+        <div class="hero-bullets">
+          <div class="hb"><span class="hb-ic"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Vision claire, centralisée et toujours à jour de votre parc</div>
+          <div class="hb"><span class="hb-ic"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Plateforme web + application mobile terrain</div>
+          <div class="hb"><span class="hb-ic"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Compatible ERP / WMS via API</div>
+        </div>
+      </div>
+      <div class="form-card" id="form">
+        <h2>Demandez une démo</h2>
+        <p class="fsub">Découvrez la plateforme en conditions réelles</p>
+        <div class="fg-row">
+          <div class="fg"><label>Prénom <span class="req">*</span></label><input type="text"></div>
+          <div class="fg"><label>Nom <span class="req">*</span></label><input type="text"></div>
+        </div>
+        <div class="fg"><label>Société <span class="req">*</span></label><input type="text"></div>
+        <div class="fg-row">
+          <div class="fg"><label>Email pro <span class="req">*</span></label><input type="email"></div>
+          <div class="fg"><label>Téléphone <span class="req">*</span></label><input type="tel"></div>
+        </div>
+        <div class="fg-row">
+          <div class="fg"><label>Quantité <span class="req">*</span></label><select><option value="">—</option><option>0-100</option><option>100-250</option><option>250-500</option><option>500-1000</option><option>+1000</option></select></div>
+          <div class="fg"><label>Nb d'utilisateurs <span class="req">*</span></label><select><option value="">—</option><option>1-5</option><option>5-20</option><option>20-50</option><option>50+</option></select></div>
+        </div>
+        <div class="fg"><label>Besoin principal <span class="req">*</span><span class="new-badge">qualif</span></label>
+          <select><option value="">—</option><option>Centraliser le suivi multi-sites</option><option>Conformité / maintenance / VGP</option><option>Inventaires automatiques</option><option>Intégration ERP / WMS</option><option>Autre</option></select>
+        </div>
+        <button class="form-btn">Demander ma démo →</button>
+        <p class="form-foot">Réponse sous 24h · *Champs obligatoires</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS -->
+<section class="logos">
+  <div class="wrap">
+    <p>Ils pilotent leur parc avec Charlie</p>
+    <div class="logos-row">
+      <span class="logo-chip">VINCI</span><span class="logo-chip">EIFFAGE RAIL</span><span class="logo-chip">SNCF RÉSEAU</span><span class="logo-chip">MANITOWOC</span><span class="logo-chip">TSO</span><span class="logo-chip">ENEDIS</span><span class="logo-chip">EQUANS</span><span class="logo-chip">RATP</span><span class="logo-chip">DALKIA</span><span class="logo-chip">NGE</span><span class="logo-chip">DAHER</span><span class="logo-chip">ILÉO</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section">
+  <div class="wrap">
+    <h2 class="sec-h2">Ce que mesurent nos clients après déploiement</h2>
+    <p class="sec-intro">Des indicateurs concrets issus des retours terrain — pas des projections, des résultats réels. Le tarif s'ajuste selon la taille de votre parc, le nombre de filiales et d'utilisateurs.</p>
+    <div class="stats-grid">
+      <div class="stat stat-light"><div class="num">−75%</div><div class="lbl">de temps de recherche de matériel</div></div>
+      <div class="stat stat-light"><div class="num">−50%</div><div class="lbl">de pertes d'équipement</div></div>
+      <div class="stat stat-light"><div class="num">−20%</div><div class="lbl">d'économies sur le rachat de matériel</div></div>
+      <div class="stat stat-light"><div class="num">100%</div><div class="lbl">des documents et inventaires digitalisés</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHARLIE GESTION WEB (le héros = la plateforme) -->
+<section class="section gray">
+  <div class="wrap">
+    <div class="split-head">
+      <span class="split-badge">Charlie Gestion · Plateforme web</span>
+      <h2 class="sec-h2">La plateforme centrale pour piloter tout votre parc</h2>
+      <p class="sec-intro">Pensée pour les responsables de parc, directeurs maintenance et conducteurs de travaux : une vision claire, centralisée et toujours à jour.</p>
+    </div>
+
+    <div class="feat">
+      <div class="feat-visual">
+        <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tableau de bord de visualisation du parc">
+          <rect width="480" height="300" fill="#fff"/>
+          <rect x="0" y="0" width="480" height="40" fill="#141412"/>
+          <circle cx="22" cy="20" r="4" fill="#FF914D"/><circle cx="38" cy="20" r="4" fill="#fff" opacity=".3"/>
+          <rect x="120" y="15" width="240" height="10" rx="5" fill="#fff" opacity=".15"/>
+          <rect x="20" y="60" width="120" height="220" rx="8" fill="#f3f2ef"/>
+          <rect x="36" y="80" width="88" height="8" rx="4" fill="#d6001c" opacity=".5"/>
+          <rect x="36" y="100" width="70" height="7" rx="3.5" fill="#d3d1c7"/>
+          <rect x="36" y="118" width="80" height="7" rx="3.5" fill="#d3d1c7"/>
+          <rect x="36" y="136" width="62" height="7" rx="3.5" fill="#d3d1c7"/>
+          <rect x="160" y="60" width="300" height="150" rx="8" fill="#eef1f4"/>
+          <path d="M180 150 Q240 90 300 130 T440 100" stroke="#dcdbd4" stroke-width="2" fill="none"/>
+          <circle cx="230" cy="120" r="7" fill="#eb3300"/><circle cx="230" cy="120" r="16" fill="none" stroke="#eb3300" stroke-width="2" opacity=".4"/>
+          <circle cx="330" cy="155" r="7" fill="#d6001c"/><circle cx="390" cy="110" r="7" fill="#FF914D"/>
+          <rect x="160" y="226" width="95" height="54" rx="8" fill="#fff" stroke="#e2e1da"/><text x="207" y="250" font-family="Arial" font-size="20" font-weight="bold" fill="#eb3300" text-anchor="middle">247</text><text x="207" y="267" font-family="Arial" font-size="9" fill="#6b6b66" text-anchor="middle">équipements</text>
+          <rect x="262" y="226" width="95" height="54" rx="8" fill="#fff" stroke="#e2e1da"/><text x="309" y="250" font-family="Arial" font-size="20" font-weight="bold" fill="#1a7f43" text-anchor="middle">8</text><text x="309" y="267" font-family="Arial" font-size="9" fill="#6b6b66" text-anchor="middle">sites actifs</text>
+          <rect x="364" y="226" width="96" height="54" rx="8" fill="#fff" stroke="#e2e1da"/><text x="412" y="250" font-family="Arial" font-size="20" font-weight="bold" fill="#141412" text-anchor="middle">3</text><text x="412" y="267" font-family="Arial" font-size="9" fill="#6b6b66" text-anchor="middle">alertes</text>
+        </svg>
+      </div>
+      <div>
+        <div class="feat-tag">Visualisation dynamique</div>
+        <h3>Une vision claire et consolidée de tout votre parc</h3>
+        <p class="lead">Chaque équipement est localisé, identifié et rattaché à sa zone, son site ou son équipe.</p>
+        <ul>
+          <li><svg viewBox="0 0 18 18"><polyline points="3,9 7,13 15,4"/></svg>Carte interactive et tableaux de suivi unitaire</li>
+          <li><svg viewBox="0 0 18 18"><polyline points="3,9 7,13 15,4"/></svg>Historique complet des déplacements et affectations</li>
+          <li><svg viewBox="0 0 18 18"><polyline points="3,9 7,13 15,4"/></svg>Filtrage par site, statut, équipe ou opération</li>
+          <li><svg viewBox="0 0 18 18"><polyline points="3,9 7,13 15,4"/></svg>Aucune saisie manuelle, données remontées en continu</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feat rev">
+      <div class="feat-visual">
+        <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Alertes intelligentes">
+          <rect width="480" height="300" fill="#fff"/>
+          <circle cx="240" cy="120" r="60" fill="none" stroke="#f3f2ef" stroke-width="20"/>
+          <circle cx="240" cy="120" r="60" fill="none" stroke="#eb3300" stroke-width="20" stroke-dasharray="190 380" stroke-linecap="round" transform="rotate(-90 240 120)"/>
+          <path d="M240 100v18M240 128h.01M232 90a10 10 0 0 1 16 0l20 36a10 10 0 0 1-8 15h-40a10 10 0 0 1-8-15z" stroke="#eb3300" stroke-width="3" fill="none" stroke-linejoin="round"/>
+          <rect x="70" y="220" width="340" height="26" rx="13" fill="#fdeee9"/><circle cx="88" cy="233" r="5" fill="#eb3300"/><rect x="104" y="229" width="180" height="8" rx="4" fill="#e2bcae"/>
+          <rect x="70" y="256" width="340" height="26" rx="13" fill="#f3f2ef"/><circle cx="88" cy="269" r="5" fill="#c4c4be"/><rect x="104" y="265" width="140" height="8" rx="4" fill="#d3d1c7"/>
+        </svg>
+      </div>
+      <div>
+        <div class="feat-tag">Alertes intelligentes &amp; paramétrables</div>
+        <h3>Ne surveillez plus manuellement, laissez la plateforme vous alerter</h3>
+        <p class="lead">Configurez vos propres règles pour être notifié dès qu'un matériel quitte un périmètre ou reste inactif trop longtemps.</p>
+        <ul>
+          <li><svg viewBox="0 0 18 18"><polyline points="3,9 7,13 15,4"/></svg>Alertes en cas de sortie de zone ou mouvement suspect</li>
+          <li><svg viewBox="0 0 18 18"><polyline points="3,9 7,13 15,4"/></svg>Suivi d'inactivité prolongée ou arrivée sur site critique</li>
+          <li><svg viewBox="0 0 18 18"><polyline points="3,9 7,13 15,4"/></svg>Paramétrage simple en quelques clics</li>
+          <li><svg viewBox="0 0 18 18"><polyline points="3,9 7,13 15,4"/></svg>Sécurisation passive du matériel sensible</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feat">
+      <div class="feat-visual">
+        <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Conformité digitalisée">
+          <rect width="480" height="300" fill="#fff"/>
+          <rect x="120" y="40" width="240" height="220" rx="10" fill="#f3f2ef"/>
+          <g transform="translate(150,72)">
+            <circle cx="11" cy="0" r="11" fill="#1a7f43"/><path d="M6 0l3 4 7-7" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <rect x="34" y="-5" width="150" height="9" rx="4.5" fill="#d3d1c7"/>
+            <rect x="34" y="9" width="90" height="6" rx="3" fill="#e2e1da"/>
+          </g>
+          <g transform="translate(150,128)">
+            <circle cx="11" cy="0" r="11" fill="#1a7f43"/><path d="M6 0l3 4 7-7" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <rect x="34" y="-5" width="150" height="9" rx="4.5" fill="#d3d1c7"/>
+            <rect x="34" y="9" width="110" height="6" rx="3" fill="#e2e1da"/>
+          </g>
+          <g transform="translate(150,184)">
+            <circle cx="11" cy="0" r="11" fill="#eb3300"/><path d="M11 -5v7M11 5h.01" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <rect x="34" y="-5" width="150" height="9" rx="4.5" fill="#e2bcae"/>
+            <rect x="34" y="9" width="70" height="6" rx="3" fill="#f0d4ca"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <div class="feat-tag">Conformité &amp; sécurité digitalisées</div>
+        <h3>Un matériel bien suivi, c'est un chantier plus sûr</h3>
+        <p class="lead">Tout est digitalisé, tracé et disponible depuis le bureau ou le terrain. Vous simplifiez les audits et renforcez la fiabilité de vos opérations.</p>
+        <ul>
+          <li><svg viewBox="0 0 18 18"><polyline points="3,9 7,13 15,4"/></svg>Suivi des maintenances et contrôles VGP</li>
+          <li><svg viewBox="0 0 18 18"><polyline points="3,9 7,13 15,4"/></svg>Rappels automatiques sur les dates d'intervention</li>
+          <li><svg viewBox="0 0 18 18"><polyline points="3,9 7,13 15,4"/></svg>Statuts personnalisés (conforme, à réviser, en quarantaine…)</li>
+          <li><svg viewBox="0 0 18 18"><polyline points="3,9 7,13 15,4"/></svg>Accès immédiat aux notices, fiches sécurité, certificats</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHARLIE GESTION MOBILE -->
+<section class="section">
+  <div class="wrap">
+    <div class="split-head">
+      <span class="split-badge">Charlie Gestion · Application mobile</span>
+      <h2 class="sec-h2">Gardez la maîtrise de votre parc, même en déplacement</h2>
+      <p class="sec-intro">Une interface simple, intuitive et 100 % orientée action pour les équipes terrain. Tout est connecté, tout est tracé.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-c"><div class="hc-ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div><h3>Contrôle</h3><p>Évaluez l'état du matériel, signalez un problème ou mettez à jour son statut en quelques secondes — sans papier ni ressaisie. Photos d'anomalie et historique synchronisé en temps réel.</p></div>
+      <div class="how-c"><div class="hc-ic"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><h3>Localisation</h3><p>Localisez instantanément vos équipements sur une carte interactive via capteurs Bluetooth, trackers GPS ou QR codes. Suivi des affectations entre zones ou chantiers.</p></div>
+      <div class="how-c"><div class="hc-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>Détection</h3><p>L'application identifie les équipements à proximité via BLE ou QR code, même en zone blanche (dernier point connu). Accès instantané à la fiche complète de l'équipement.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:28px">
+      <a href="#form" class="cta-btn" style="background:var(--grad);color:#fff;display:inline-block">Voir l'application en démo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- INVENTAIRES AUTOMATIQUES (contenu réel du site) -->
+<section class="section">
+  <div class="wrap">
+    <div class="split-head">
+      <span class="split-badge">Inventaires automatiques</span>
+      <h2 class="sec-h2">Finis les inventaires manuels et chronophages</h2>
+      <p class="sec-intro">Charlie automatise l'inventaire et le suivi de vos équipements : une vision fiable et actualisée en temps réel, sans saisie manuelle.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-c"><div class="hc-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>Détection du matériel</h3><p>Les trackers et Charlie Connect détectent automatiquement vos équipements et mettent à jour l'inventaire, sans aucune saisie manuelle.</p></div>
+      <div class="how-c"><div class="hc-ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12"/></svg></div><h3>Tableaux dynamiques</h3><p>Suivez l'état de votre parc en temps réel via des tableaux filtrables par zone, statut ou type d'équipement.</p></div>
+      <div class="how-c"><div class="hc-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Alertes matériel immobile</h3><p>Recevez une notification lorsqu'un matériel reste inactif trop longtemps, pour mieux gérer sa disponibilité et anticiper les besoins.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HARDWARE relégué : "compatible avec notre matériel" -->
+<section class="section gray">
+  <div class="wrap">
+    <div class="split-head">
+      <h2 class="sec-h2">Alimentée par notre matériel terrain</h2>
+      <p class="sec-intro">La plateforme s'appuie sur une gamme de capteurs et trackers adaptés à chaque type d'équipement. Vous n'achetez que ce dont vous avez besoin.</p>
+    </div>
+    <div class="uc-tabs-wrap">
+      <div class="prod-tabs">
+        <button class="prod-tab active" onclick="pt('capteurs',this)">Capteurs BLE</button>
+        <button class="prod-tab" onclick="pt('trackers',this)">Trackers GPS</button>
+      </div>
+    </div>
+    <div id="capteurs" class="prod-panel active">
+      <div class="uc"><div class="uc-img">⚙ PHOTO — Lite sur petit outillage</div><div class="uc-body"><div class="uc-usage">Petit outillage</div><div class="uc-prod">Lite Basic + Lite LED</div><div class="uc-specs"><div class="uc-spec"><span class="k">Dimensions</span><span class="v">4,5 × 2,4 cm</span></div><div class="uc-spec"><span class="k">Durée de vie</span><span class="v">3,5 ans</span></div></div></div></div>
+      <div class="uc"><div class="uc-img">⚙ PHOTO — Compact sur électroportatif</div><div class="uc-body"><div class="uc-usage">Électroportatif</div><div class="uc-prod">Compact LED</div><div class="uc-specs"><div class="uc-spec"><span class="k">Dimensions</span><span class="v">3,6 × 1,15 cm</span></div><div class="uc-spec"><span class="k">Durée de vie</span><span class="v">3,5 ans</span></div></div></div></div>
+      <div class="uc"><div class="uc-img">⚙ PHOTO — Max sur gros matériel</div><div class="uc-body"><div class="uc-usage">Gros matériels</div><div class="uc-prod">Max LED + Max Basic</div><div class="uc-specs"><div class="uc-spec"><span class="k">Dimensions</span><span class="v">5,7 × 2,0 cm</span></div><div class="uc-spec"><span class="k">Durée de vie</span><span class="v">15 ans</span></div></div></div></div>
+    </div>
+    <div id="trackers" class="prod-panel">
+      <div class="uc"><div class="uc-img">⚙ PHOTO — TCOY3G sur minipelle</div><div class="uc-body"><div class="uc-usage">Matériels critiques</div><div class="uc-prod">TCOY3G + GC81</div><div class="uc-specs"><div class="uc-spec"><span class="k">Autonomie</span><span class="v">6 ans</span></div><div class="uc-spec"><span class="k">Techno</span><span class="v">GPS + LTE-M</span></div></div></div></div>
+      <div class="uc"><div class="uc-img">⚙ PHOTO — GC234 sur véhicule</div><div class="uc-body"><div class="uc-usage">Véhicules et engins</div><div class="uc-prod">GC234 + GC81</div><div class="uc-specs"><div class="uc-spec"><span class="k">Remontée</span><span class="v">Temps réel</span></div><div class="uc-spec"><span class="k">Techno</span><span class="v">GPS + LTE-M</span></div></div></div></div>
+      <div class="uc"><div class="uc-img">⚙ PHOTO — GC06 en atelier</div><div class="uc-body"><div class="uc-usage">Ateliers et entrepôts</div><div class="uc-prod">GC06</div><div class="uc-specs"><div class="uc-spec"><span class="k">Usage</span><span class="v">Indoor / fixe</span></div><div class="uc-spec"><span class="k">Techno</span><span class="v">GPS + LTE-M</span></div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTÉGRATIONS -->
+<section class="section dark">
+  <div class="wrap" style="text-align:center;max-width:680px">
+    <p class="sec-tag">Intégrations</p>
+    <h2 class="sec-h2">Compatible avec vos outils internes</h2>
+    <p class="sec-intro">L'API Charlie permet de connecter la plateforme à votre ERP ou WMS. De nombreux partenaires sont déjà intégrés, avec un accompagnement technique dédié.</p>
+    <p style="color:rgba(255,255,255,.5);font-size:13px;font-family:monospace">api.charlie-solutions.com</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+  <div class="wrap">
+    <div class="testi-head"><span style="color:var(--or);font-size:18px;letter-spacing:1px">★★★★★</span><span style="font-size:14px;color:var(--g500)"><strong style="color:var(--noir)">4,8/5</strong> — témoignages vérifiés Trustfolio</span></div>
+    <div class="testi-note">⚙ Note d'intégration Elementor : insérer ici le widget Témoignages global (template global, mise à jour automatique depuis l'accueil).</div>
+    <div class="testi-grid">
+      <div class="tc"><p class="q">"Charlie nous accompagne depuis 2021. Nous avons une vision très claire de notre parc. L'application mobile permet en un coup d'œil d'éviter de parcourir des kilomètres inutilement."</p><div class="a"><div class="av">PM</div><div><div class="nm">Pierre Matysiak</div><div class="co">Iléo</div></div></div></div>
+      <div class="tc"><p class="q">"Un suivi à distance grâce à un système centralisé, avec une optimisation continue de l'application pour répondre à nos besoins spécifiques. Un accompagnement personnalisé."</p><div class="a"><div class="av">VL</div><div><div class="nm">Vincent Lala</div><div class="co">Sages Rail</div></div></div></div>
+      <div class="tc"><p class="q">"L'interface Charlie et les puces nous ont permis de suivre les dates de validité liées à la conformité, tout en localisant le matériel en temps réel."</p><div class="a"><div class="av">PG</div><div><div class="nm">Philippe Gutleben</div><div class="co">TSO</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Voyez Charlie Gestion en action</h2>
+    <p>Une démo rapide, des résultats concrets dès les premiers jours.</p>
+    <a href="#form" class="cta-btn">Demander une démo →</a>
+  </div>
+</section>
+
+<footer><p>© 2026 Charlie Solutions — Maquette LP Logiciel &amp; Système (orientée plateforme) · Flying For You</p></footer>
+
+<script>
+function pt(id,btn){document.querySelectorAll('.prod-tab').forEach(function(t){t.classList.remove('active')});document.querySelectorAll('.prod-panel').forEach(function(p){p.classList.remove('active')});btn.classList.add('active');document.getElementById(id).classList.add('active')}
+</script>
+</body>
+</html>

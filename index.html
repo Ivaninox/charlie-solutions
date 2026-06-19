@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charlie Solutions — Maquettes Landing Pages SEA | Flying For You</title>
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+.intro{padding:72px 0 56px;background:var(--noir);color:#fff;position:relative;overflow:hidden}
+.intro .vbg{position:absolute;inset:0;opacity:.12}
+.intro .wrap{position:relative;z-index:2}
+.intro .eyebrow{display:inline-flex;align-items:center;gap:7px;background:rgba(235,51,0,.18);border:1px solid rgba(235,51,0,.45);color:#fff;font-size:13px;font-weight:600;padding:6px 14px;border-radius:100px;margin-bottom:22px}
+.intro h1{font-size:40px;font-weight:700;letter-spacing:-.5px;line-height:1.12;max-width:760px;margin-bottom:16px}
+.intro h1 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.intro p{font-size:17px;color:rgba(255,255,255,.7);max-width:640px;line-height:1.6}
+.intro .meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:28px}
+.intro .meta div{font-size:13px;color:rgba(255,255,255,.55)}
+.intro .meta strong{display:block;color:#fff;font-size:15px;font-weight:600;margin-bottom:2px}
+
+.recap{padding:60px 0}
+.recap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:14px}
+.kpi{background:var(--g100);border-radius:var(--rl);padding:22px 18px;text-align:center}
+.kpi .n{font-size:30px;font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
+.kpi .l{font-size:12px;color:var(--g500);margin-top:7px;line-height:1.4}
+
+.actions{padding:0 0 60px}
+.act-list{display:flex;flex-direction:column;gap:12px;max-width:880px;margin:0 auto}
+.act{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--g300);border-radius:var(--rl);padding:20px 22px}
+.act .badge{flex-shrink:0;width:30px;height:30px;border-radius:8px;background:var(--or-l);color:var(--or);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.act h3{font-size:16px;font-weight:700;margin-bottom:5px}
+.act p{font-size:14px;color:var(--g500);line-height:1.55}
+.act .tag{display:inline-block;font-size:11px;font-weight:600;padding:2px 9px;border-radius:100px;margin-left:8px;vertical-align:middle}
+.tag-on{background:#e7f6ec;color:#1a7f43}
+.tag-test{background:var(--or-l);color:var(--or)}
+.tag-soon{background:var(--g100);color:var(--g500)}
+
+.lps{padding:64px 0;background:var(--g100)}
+.lp-tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:900px;margin:0 auto}
+.lp-tab{background:#fff;border:1px solid var(--g300);border-radius:var(--rl);overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+.lp-tab:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.lp-tab .head{height:96px;display:flex;align-items:center;justify-content:center;position:relative}
+.lp-tab .head.h1{background:var(--noir)}
+.lp-tab .head.h2{background:var(--grad)}
+.lp-tab .head.h3{background:var(--g700)}
+.lp-tab .head.h4{background:var(--g700)}
+.lp-tab .head span{color:#fff;font-weight:700;font-size:15px}
+.lp-tab .body{padding:20px 22px;flex:1}
+.lp-tab .grp{font-size:11px;font-weight:700;color:var(--or);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px}
+.lp-tab h3{font-size:18px;font-weight:700;margin-bottom:7px}
+.lp-tab p{font-size:13px;color:var(--g500);line-height:1.5;margin-bottom:12px}
+.lp-tab .go{font-size:13px;font-weight:600;color:var(--or)}
+.st{display:inline-block;font-size:11px;font-weight:600;padding:2px 9px;border-radius:100px}
+@media(max-width:900px){.recap-grid{grid-template-columns:repeat(2,1fr)}.lp-tabs{grid-template-columns:1fr}.intro h1{font-size:30px}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-i">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Charlie Solutions</a>
+    <div class="nav-links">
+      <a href="#recap">Synthèse</a>
+      <a href="#actions">Plan d'action</a>
+      <a href="#lps">Landing pages</a>
+    </div>
+  </div>
+</nav>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="vbg"><svg viewBox="0 0 1100 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="gi" width="46" height="46" patternUnits="userSpaceOnUse"><path d="M46 0H0V46" fill="none" stroke="#fff" stroke-width="1"/></pattern></defs><rect width="1100" height="400" fill="url(#gi)"/></svg></div>
+  <div class="wrap">
+    <div class="eyebrow">Flying For You × Charlie Solutions — Q2 2026</div>
+    <h1>Optimisation SEA : <span class="hl">refonte des landing pages</span> et A/B testing</h1>
+    <p>Ce dossier présente les maquettes des landing pages déclinées dans le cadre du plan d'action Q2. Objectif : améliorer la qualité des leads et le ratio de transformation lead → affaire, en alignant chaque intention de recherche avec une page dédiée.</p>
+    <div class="meta">
+      <div><strong>4 landing pages</strong>une par groupe d'annonces</div>
+      <div><strong>A/B test</strong>contenu + formulaire qualifiant</div>
+      <div><strong>Charte respectée</strong>design fidèle au site actuel</div>
+    </div>
+  </div>
+</section>
+
+<!-- RECAP -->
+<section class="recap" id="recap">
+  <div class="wrap">
+    <p class="sec-tag">Synthèse Q1 2026</p>
+    <h2 class="sec-h2" style="margin-bottom:32px">Le point de départ</h2>
+    <div class="recap-grid">
+      <div class="kpi"><div class="n">78</div><div class="l">leads SEA (Jan-Avril)</div></div>
+      <div class="kpi"><div class="n">+99%</div><div class="l">CTR vs 2025</div></div>
+      <div class="kpi"><div class="n">81%</div><div class="l">leads Fort + Moyen</div></div>
+      <div class="kpi"><div class="n">85 k€</div><div class="l">pipe identifié à date</div></div>
+    </div>
+    <p style="text-align:center;color:var(--g500);font-size:15px;max-width:720px;margin:18px auto 0;line-height:1.6">Le volume et la qualité des leads ont progressé, mais le ratio de transformation lead → affaire a baissé (de 73,9 % à 20,5 % sur la période, −72 % en relatif) du fait de l'élargissement du volume. Le plan Q2 vise à réaligner intention → page → qualification pour remonter ce ratio.</p>
+  </div>
+</section>
+
+<!-- ACTIONS -->
+<section class="actions" id="actions">
+  <div class="wrap">
+    <p class="sec-tag">Plan d'action Q2</p>
+    <h2 class="sec-h2" style="margin-bottom:32px">Ce qui est mis en place</h2>
+    <div class="act-list">
+      <div class="act"><div class="badge">1</div><div><h3>Renforcement des requêtes métier<span class="tag tag-on">en cours</span></h3><p>Priorisation des mots-clés à forte valeur business (puce gps pour outillage, traceur gps matériel de chantier, tracker équipement…) et extension de la liste de négatifs pour filtrer le trafic grand public.</p></div></div>
+      <div class="act"><div class="badge">2</div><div><h3>Modulation device, créneaux &amp; géographie<span class="tag tag-on">en cours</span></h3><p>Réduction des créneaux à CPA élevé (Mobile lundi/vendredi), renforcement du Desktop vendredi, exclusion des tablettes, ajustements régionaux (Auvergne-Rhône-Alpes +30 %, Normandie −30 %).</p></div></div>
+      <div class="act"><div class="badge">3</div><div><h3>A/B test landing page Géolocalisation<span class="tag tag-test">à tester</span></h3><p>Déclinaison de la LP active avec un nouvel angle (anti-perte / vol) et un formulaire enrichi de 2 champs qualifiants obligatoires (besoin principal + délai), pour filtrer les leads peu matures.</p></div></div>
+      <div class="act"><div class="badge">4</div><div><h3>Landing pages dédiées par intention<span class="tag tag-test">prêtes</span></h3><p>Une page par groupe d'annonces (Logiciel &amp; Système, Concurrence et Charlie, Traceur &amp; Matériel) pour aligner précisément le message avec l'intention de recherche et améliorer le taux de conversion. Les 4 maquettes sont prêtes à tester.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LANDING PAGES -->
+<section class="lps" id="lps">
+  <div class="wrap">
+    <p class="sec-tag">Les maquettes</p>
+    <h2 class="sec-h2" style="margin-bottom:8px">4 landing pages, 4 intentions</h2>
+    <p class="sec-intro">Cliquez sur une carte pour ouvrir la maquette correspondante.</p>
+    <div class="lp-tabs">
+      <a class="lp-tab" href="geolocalisation.html">
+        <div class="head h1"><span>Variante B — A/B test</span></div>
+        <div class="body">
+          <div class="grp">Groupe Géolocalisation</div>
+          <h3>Traceur GPS &amp; géolocalisation</h3>
+          <p>Déclinaison de la LP active pour A/B test : angle anti-perte, formulaire qualifiant enrichi, même charte.</p>
+          <span class="st tag-test">Prête à tester</span>
+          <div class="go" style="margin-top:12px">Ouvrir la maquette →</div>
+        </div>
+      </a>
+      <a class="lp-tab" href="logiciel.html">
+        <div class="head h2"><span>LP dédiée</span></div>
+        <div class="body">
+          <div class="grp">Groupe Logiciel &amp; Système</div>
+          <h3>Logiciel de gestion de parc</h3>
+          <p>Angle pilotage : plateforme web (visualisation, alertes, conformité) + application mobile terrain. Le hardware est relégué en support.</p>
+          <span class="st tag-test">Prête à tester</span>
+          <div class="go" style="margin-top:12px">Ouvrir la maquette →</div>
+        </div>
+      </a>
+      <a class="lp-tab" href="concurrence.html">
+        <div class="head h2"><span>LP dédiée</span></div>
+        <div class="body">
+          <div class="grp">Groupe Concurrence et Charlie</div>
+          <h3>Comparatif &amp; marque</h3>
+          <p>Angle comparatif sur les requêtes concurrents (Trackunit, Hilti On Track, TRAKmy, UBI…) et la marque Charlie. Tableau comparatif + bénéfices.</p>
+          <span class="st tag-test">Prête à tester</span>
+          <div class="go" style="margin-top:12px">Ouvrir la maquette →</div>
+        </div>
+      </a>
+      <a class="lp-tab" href="traceur-materiel.html">
+        <div class="head h1"><span>LP dédiée</span></div>
+        <div class="body">
+          <div class="grp">Groupe Traceur &amp; Matériel</div>
+          <h3>Hardware spécifique</h3>
+          <p>Angle traceur autonome / anti-vol : gamme de traceurs par type de matériel, autonomie, robustesse, bloc SEO.</p>
+          <span class="st tag-test">Prête à tester</span>
+          <div class="go" style="margin-top:12px">Ouvrir la maquette →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Des questions sur ces maquettes ?</h2>
+    <p>Flying For You — Ivan Messias · imessias@flyingforyou.fr · 06 12 20 44 00</p>
+    <a href="geolocalisation.html" class="cta-btn">Voir la première LP →</a>
+  </div>
+</section>
+
+<footer><p>© 2026 Charlie Solutions × Flying For You — Maquettes Landing Pages SEA Q2 · Document de travail</p></footer>
+
+</body>
+</html>
