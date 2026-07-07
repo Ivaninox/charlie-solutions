@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Logiciel de gestion de parc matériel | Charlie Gestion</title>
-<meta name="description" content="Charlie Gestion centralise la localisation, le statut, l'historique et la conformité de votre parc matériel. Une plateforme web et mobile pour tout piloter. Demandez une démo.">
+<meta name="description" content="Charlie Gestion centralise la localisation, les statuts, l'historique, les inventaires et la conformité de votre parc matériel. Une plateforme web et mobile pour tout piloter. Demandez une démo.">
 <link rel="stylesheet" href="assets/styles.css">
 <style>
 .feat{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-bottom:56px}
@@ -61,8 +61,8 @@
     <div class="hero-grid">
       <div>
         <div class="hero-eyebrow">Logiciel de gestion de parc matériel</div>
-        <h1>La maîtrise totale de vos équipements, <span class="hl">depuis un seul écran</span>.</h1>
-        <p class="hero-sub">Charlie Gestion centralise localisation, statut, historique et conformité de tout votre parc. Les données remontent automatiquement via vos capteurs, trackers et QR codes — plus de saisie manuelle, plus d'oublis, plus d'incertitude.</p>
+        <h1>La maîtrise totale de vos équipements, <span class="hl">depuis une seule plateforme</span>.</h1>
+        <p class="hero-sub">Charlie Gestion centralise la localisation, les statuts, l'historique, les inventaires et la conformité de tout votre parc matériel. Les données remontent automatiquement via vos capteurs, trackers et QR codes — plus de saisie manuelle, plus d'oublis, plus d'incertitude.</p>
         <div class="hero-bullets">
           <div class="hb"><span class="hb-ic"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Vision claire, centralisée et toujours à jour de votre parc</div>
           <div class="hb"><span class="hb-ic"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Plateforme web + application mobile terrain</div>
@@ -82,12 +82,13 @@
           <div class="fg"><label>Téléphone <span class="req">*</span></label><input type="tel"></div>
         </div>
         <div class="fg-row">
-          <div class="fg"><label>Quantité <span class="req">*</span></label><select><option value="">—</option><option>0-100</option><option>100-250</option><option>250-500</option><option>500-1000</option><option>+1000</option></select></div>
+          <div class="fg"><label>Quantité</label><select><option value="">—</option><option>0-100</option><option>100-250</option><option>250-500</option><option>500-1000</option><option>+1000</option></select></div>
           <div class="fg"><label>Nb d'utilisateurs <span class="req">*</span></label><select><option value="">—</option><option>1-5</option><option>5-20</option><option>20-50</option><option>50+</option></select></div>
         </div>
         <div class="fg"><label>Besoin principal <span class="req">*</span><span class="new-badge">qualif</span></label>
-          <select><option value="">—</option><option>Centraliser le suivi multi-sites</option><option>Conformité / maintenance / VGP</option><option>Inventaires automatiques</option><option>Intégration ERP / WMS</option><option>Autre</option></select>
+          <select><option value="">—</option><option>Centraliser le suivi multi-sites</option><option>Conformité / maintenance / VGP</option><option>Inventaires automatiques</option><option>Suivi des affectations équipes / sites</option><option>Intégration ERP / WMS</option><option>Autre</option></select>
         </div>
+        <div class="fg"><label>Message</label><textarea rows="3" style="height:auto;min-height:68px;resize:vertical" placeholder="Précisez votre besoin (optionnel)"></textarea></div>
         <button class="form-btn">Demander ma démo →</button>
         <p class="form-foot">Réponse sous 24h · *Champs obligatoires</p>
       </div>
@@ -101,20 +102,6 @@
     <p>Ils pilotent leur parc avec Charlie</p>
     <div class="logos-row">
       <span class="logo-chip">VINCI</span><span class="logo-chip">EIFFAGE RAIL</span><span class="logo-chip">SNCF RÉSEAU</span><span class="logo-chip">MANITOWOC</span><span class="logo-chip">TSO</span><span class="logo-chip">ENEDIS</span><span class="logo-chip">EQUANS</span><span class="logo-chip">RATP</span><span class="logo-chip">DALKIA</span><span class="logo-chip">NGE</span><span class="logo-chip">DAHER</span><span class="logo-chip">ILÉO</span>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<section class="section">
-  <div class="wrap">
-    <h2 class="sec-h2">Ce que mesurent nos clients après déploiement</h2>
-    <p class="sec-intro">Des indicateurs concrets issus des retours terrain — pas des projections, des résultats réels. Le tarif s'ajuste selon la taille de votre parc, le nombre de filiales et d'utilisateurs.</p>
-    <div class="stats-grid">
-      <div class="stat stat-light"><div class="num">−75%</div><div class="lbl">de temps de recherche de matériel</div></div>
-      <div class="stat stat-light"><div class="num">−50%</div><div class="lbl">de pertes d'équipement</div></div>
-      <div class="stat stat-light"><div class="num">−20%</div><div class="lbl">d'économies sur le rachat de matériel</div></div>
-      <div class="stat stat-light"><div class="num">100%</div><div class="lbl">des documents et inventaires digitalisés</div></div>
     </div>
   </div>
 </section>
@@ -223,6 +210,20 @@
   </div>
 </section>
 
+<!-- STATS -->
+<section class="section">
+  <div class="wrap">
+    <h2 class="sec-h2">Ce que mesurent nos clients après déploiement</h2>
+    <p class="sec-intro">Des indicateurs concrets issus des retours terrain — pas des projections, des résultats réels. Le tarif s'ajuste selon la taille de votre parc, le nombre de filiales et d'utilisateurs.</p>
+    <div class="stats-grid">
+      <div class="stat stat-light"><div class="num">−75%</div><div class="lbl">de temps de recherche de matériel</div></div>
+      <div class="stat stat-light"><div class="num">−50%</div><div class="lbl">de pertes d'équipement</div></div>
+      <div class="stat stat-light"><div class="num">−20%</div><div class="lbl">d'économies sur le rachat de matériel</div></div>
+      <div class="stat stat-light"><div class="num">100%</div><div class="lbl">des documents et inventaires digitalisés</div></div>
+    </div>
+  </div>
+</section>
+
 <!-- CHARLIE GESTION MOBILE -->
 <section class="section">
   <div class="wrap">
@@ -255,6 +256,11 @@
       <div class="how-c"><div class="hc-ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12"/></svg></div><h3>Tableaux dynamiques</h3><p>Suivez l'état de votre parc en temps réel via des tableaux filtrables par zone, statut ou type d'équipement.</p></div>
       <div class="how-c"><div class="hc-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Alertes matériel immobile</h3><p>Recevez une notification lorsqu'un matériel reste inactif trop longtemps, pour mieux gérer sa disponibilité et anticiper les besoins.</p></div>
     </div>
+    <div style="max-width:820px;margin:34px auto 0">
+      <div class="video-frame"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+      <p class="video-cap" style="color:var(--g500)">⚙ GIF / VIDÉO — Charlie Connect : détection automatique des équipements par nos antennes (à intégrer)</p>
+      <p style="text-align:center;font-size:14px;color:var(--g500);line-height:1.65;max-width:680px;margin:14px auto 0">Concrètement, l'inventaire se met à jour tout seul : <strong style="color:var(--g700)">Charlie Connect</strong> (nos antennes de détection automatique) reconnaît les équipements présents, tandis que les <strong style="color:var(--g700)">trackers</strong> couvrent les zones mobiles (véhicules, conteneurs) comme les zones fixes (entrepôt, atelier). Vous n'avez plus rien à saisir.</p>
+    </div>
   </div>
 </section>
 
@@ -263,7 +269,7 @@
   <div class="wrap">
     <div class="split-head">
       <h2 class="sec-h2">Alimentée par notre matériel terrain</h2>
-      <p class="sec-intro">La plateforme s'appuie sur une gamme de capteurs et trackers adaptés à chaque type d'équipement. Vous n'achetez que ce dont vous avez besoin.</p>
+      <p class="sec-intro">La plateforme s'appuie sur une gamme de capteurs, trackers et QR codes, résistants aux contraintes de votre terrain et adaptés à chaque type d'équipement. Vous n'achetez que ce dont vous avez besoin.</p>
     </div>
     <div class="uc-tabs-wrap">
       <div class="prod-tabs">
@@ -284,15 +290,6 @@
   </div>
 </section>
 
-<!-- INTÉGRATIONS -->
-<section class="section dark">
-  <div class="wrap" style="text-align:center;max-width:680px">
-    <p class="sec-tag">Intégrations</p>
-    <h2 class="sec-h2">Compatible avec vos outils internes</h2>
-    <p class="sec-intro">L'API Charlie permet de connecter la plateforme à votre ERP ou WMS. De nombreux partenaires sont déjà intégrés, avec un accompagnement technique dédié.</p>
-    <p style="color:rgba(255,255,255,.5);font-size:13px;font-family:monospace">api.charlie-solutions.com</p>
-  </div>
-</section>
 
 <!-- TESTIMONIALS -->
 <section class="section">
@@ -304,6 +301,16 @@
       <div class="tc"><p class="q">"Un suivi à distance grâce à un système centralisé, avec une optimisation continue de l'application pour répondre à nos besoins spécifiques. Un accompagnement personnalisé."</p><div class="a"><div class="av">VL</div><div><div class="nm">Vincent Lala</div><div class="co">Sages Rail</div></div></div></div>
       <div class="tc"><p class="q">"L'interface Charlie et les puces nous ont permis de suivre les dates de validité liées à la conformité, tout en localisant le matériel en temps réel."</p><div class="a"><div class="av">PG</div><div><div class="nm">Philippe Gutleben</div><div class="co">TSO</div></div></div></div>
     </div>
+  </div>
+</section>
+
+<!-- VIDÉO RÉASSURANCE -->
+<section class="video-sec">
+  <div class="wrap">
+    <p class="sec-tag">Ils l'utilisent au quotidien</p>
+    <h2 class="sec-h2">Charlie Gestion en conditions réelles</h2>
+    <div class="video-frame"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+    <p class="video-cap">⚙ VIDÉO — témoignage client Potain-Manitowoc ou TSO (MP4 à intégrer)</p>
   </div>
 </section>
 
